@@ -24,7 +24,7 @@ class SplashView extends StatelessWidget {
               ),
               SizedBox(height: 50.px),
               Text(
-                "Made with Flutter",
+                "Made by Flutter",
                 style: Theme.of(context).textTheme.titleLarge!.copyWith(color: Colors.white),
               ),
               SizedBox(height: 50.px),
