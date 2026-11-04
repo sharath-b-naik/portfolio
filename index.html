@@ -1,38 +1,245 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Sharath B Naik — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Sharath B Naik — Full Stack Developer specialised in Flutter. Mobile apps from concept to the App Store and Play Store."
+    />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta property="og:title" content="Sharath B Naik — Full Stack Developer" />
+    <meta property="og:description" content="Mobile apps from concept to the stores. Flutter at heart, full-stack by craft." />
+    <meta property="og:image" content="/img/sharath.webp" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" as="image" href="/img/sharath.webp" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" aria-hidden="true">
+      <div class="pl-inner">
+        <div class="pl-name">Sharath B Naik</div>
+        <div class="pl-count"><span>0</span>%</div>
+      </div>
+      <div class="pl-bar"><i></i></div>
+    </div>
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!-- Ambient background -->
+    <div class="bg" aria-hidden="true">
+      <div class="orb orb-a"></div>
+      <div class="orb orb-b"></div>
+      <div class="orb orb-c"></div>
+      <div class="grid-lines"></div>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"><i></i></div>
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <!-- Navigation -->
+    <header class="nav">
+      <a class="brand" href="#home" data-goto="home" aria-label="Home">
+        <img src="/img/avatar.webp" alt="" width="128" height="128" />
+      </a>
+      <div class="nav-title" aria-live="polite">
+        <span class="nt"><b class="nt-prefix">Welcome</b> <em class="nt-title">back</em></span>
+      </div>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#home" data-goto="home">Home</a>
+        <a href="#about" data-goto="about">About</a>
+        <a href="#stack" data-goto="stack">Stack</a>
+        <a href="#apps" data-goto="apps">Apps</a>
+        <a href="#code" data-goto="code">Code</a>
+        <a href="#contact" data-goto="contact">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    </header>
+    <div class="menu" aria-hidden="true">
+      <a href="#home" data-goto="home"><small>01</small>Home</a>
+      <a href="#about" data-goto="about"><small>02</small>About</a>
+      <a href="#stack" data-goto="stack"><small>03</small>Stack</a>
+      <a href="#apps" data-goto="apps"><small>04</small>Apps</a>
+      <a href="#code" data-goto="code"><small>05</small>Code</a>
+      <a href="#contact" data-goto="contact"><small>06</small>Contact</a>
+    </div>
+    <div class="progress" aria-hidden="true"><i></i></div>
+    <ol class="dots" aria-hidden="true"></ol>
+    <div class="hud" aria-hidden="true">
+      <span class="hud-win"><span class="hud-idx">01</span></span>
+      <i class="hud-line"></i>
+      <span class="hud-win"><span class="hud-name">Home</span></span>
+      <span class="hud-total">/ 06</span>
+    </div>
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/portfolio/">
+    <main class="stage">
+      <!-- shared gradient defs for line work -->
+      <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+        <defs>
+          <linearGradient id="g-line" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#7cf5c8" stop-opacity="0" />
+            <stop offset=".4" stop-color="#7cf5c8" />
+            <stop offset=".75" stop-color="#8ab4ff" />
+            <stop offset="1" stop-color="#8ab4ff" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient id="g-warm" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#7cf5c8" />
+            <stop offset="1" stop-color="#b8ffe6" />
+          </linearGradient>
+          <linearGradient id="g-cool" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#7cf5c8" />
+            <stop offset="1" stop-color="#8ab4ff" />
+          </linearGradient>
+        </defs>
+      </svg>
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+      <div class="scan" aria-hidden="true"></div>
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="portfolio">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+      <!-- ── HERO ─────────────────────────────── -->
+      <section class="scene hero" id="home" data-title="Welcome|back">
+        <svg class="hero-lines" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+          <g class="hl-base">
+            <path pathLength="1" d="M-60 720 C 300 600, 520 840, 840 650 S 1280 380, 1500 470" />
+            <path pathLength="1" d="M-60 230 C 260 300, 440 110, 780 200 S 1210 120, 1500 70" />
+            <path pathLength="1" d="M180 960 C 420 720, 900 990, 1110 700 S 1390 520, 1500 560" />
+          </g>
+          <g class="hl-comet">
+            <path pathLength="1" d="M-60 720 C 300 600, 520 840, 840 650 S 1280 380, 1500 470" />
+            <path pathLength="1" d="M-60 230 C 260 300, 440 110, 780 200 S 1210 120, 1500 70" />
+            <path pathLength="1" d="M180 960 C 420 720, 900 990, 1110 700 S 1390 520, 1500 560" />
+          </g>
+        </svg>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse"></span>Available for freelance &amp; full-time</p>
+          <h1 class="hero-name">
+            <span class="line split">Sharath</span>
+            <span class="line split serif">B Naik</span>
+          </h1>
+          <p class="hero-role"><b>Full Stack Developer</b><span class="sep"></span>Flutter specialist</p>
+          <p class="hero-sub">I craft excellent mobile apps — handling every step from concept to deployment.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary magnetic" href="#apps" data-goto="apps"><span>See my apps</span></a>
+            <a class="btn btn-ghost magnetic" href="#contact" data-goto="contact"><span>Get in touch</span></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <svg class="halo" viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="halo-track" cx="50" cy="50" r="49" pathLength="1" />
+            <circle class="halo-tick" cx="50" cy="50" r="45" pathLength="1" />
+          </svg>
+          <div class="arc"><i></i></div>
+          <div class="avatar"><img src="/img/sharath.webp" alt="Portrait of Sharath B Naik" width="800" height="800" fetchpriority="high" /></div>
+        </div>
+        <div class="scroll-hint"><span>Scroll</span><i></i></div>
+      </section>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+      <div class="wipe" aria-hidden="true"></div>
 
-  <title>portfolio</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+      <!-- ── ABOUT ────────────────────────────── -->
+      <section class="scene about" id="about" data-title="About|me">
+        <div class="about-inner">
+          <p class="eyebrow"><span class="idx">02</span>About</p>
+          <p class="statement words">
+            I'm a full stack developer who lives in Flutter. I take apps from a blank canvas to the Play Store and
+            App Store — design, code, backend and release — and I care about every pixel and every millisecond in
+            between.
+          </p>
+          <i class="rule" aria-hidden="true"></i>
+          <div class="stats">
+            <div class="stat"><b data-count="5">5</b><span>apps live in the stores</span></div>
+            <div class="stat"><b data-count="2">2</b><span>platforms, one codebase</span></div>
+            <div class="stat"><b data-count="4">4</b><span>languages — Dart, Go, JS, SQL</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── STACK ────────────────────────────── -->
+      <section class="scene stack" id="stack" data-title="My|toolkit">
+        <div class="stack-head">
+          <p class="eyebrow"><span class="idx">03</span>Specialised in</p>
+          <h2 class="h2"><span class="split">The tools</span> <span class="split serif">I build with</span></h2>
+          <p class="muted">Flutter &amp; Dart on the client, Go and Node.js on the server, Firebase and PostgreSQL for data.</p>
+        </div>
+        <div class="orbit-wrap">
+          <div class="orbit">
+            <svg class="spokes" aria-hidden="true"></svg>
+            <ul class="orbit-list"></ul>
+          </div>
+          <div class="orbit-core">
+            <img src="/icons/flutter.webp" alt="" width="80" height="80" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ── APPS ─────────────────────────────── -->
+      <section class="scene apps" id="apps" data-title="Shipped|apps">
+        <div class="apps-head">
+          <p class="eyebrow"><span class="idx">04</span>In production</p>
+          <h2 class="h2"><span class="split">Shipped to</span> <span class="split serif">the stores</span></h2>
+          <p class="muted">Real apps, used by real people — on Google Play and the App Store.</p>
+          <div class="counter" aria-hidden="true">
+            <div class="counter-win"><div class="counter-strip"></div></div>
+            <span>/ <em class="counter-total"></em></span>
+          </div>
+        </div>
+        <div class="deck"></div>
+      </section>
+
+      <!-- ── CODE (GitHub) ────────────────────── -->
+      <section class="scene code" id="code" data-title="Open|source">
+        <div class="code-copy">
+          <p class="eyebrow"><span class="idx">05</span>Open source</p>
+          <h2 class="h2"><span class="split">More code</span> <span class="split serif">on GitHub</span></h2>
+          <p class="muted">Side projects, UI experiments and open-source work — all out in the open.</p>
+          <a class="btn btn-primary magnetic gh-btn" href="https://github.com/sharath-b-naik" target="_blank" rel="noopener">
+            <span>github.com/sharath-b-naik</span><span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+        <a class="gh-mark" href="https://github.com/sharath-b-naik" target="_blank" rel="noopener" aria-label="Open GitHub profile">
+          <svg viewBox="-4 -4 32 32" aria-hidden="true">
+            <circle class="gh-ring gh-ring-1" cx="12" cy="12" r="15" pathLength="1" />
+            <circle class="gh-ring gh-ring-2" cx="12" cy="12" r="15.9" pathLength="1" />
+            <path class="gh-fill" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            <path class="gh-line" pathLength="1" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+        </a>
+      </section>
+
+      <!-- ── CONTACT ──────────────────────────── -->
+      <section class="scene contact" id="contact" data-title="Say|hello">
+        <div class="contact-inner">
+          <p class="eyebrow"><span class="idx">06</span>Contact</p>
+          <h2 class="mega">
+            <span class="line split">Let's build</span>
+            <span class="line split serif">something great.</span>
+          </h2>
+          <svg class="swoosh" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true">
+            <path pathLength="1" d="M4 30 C 120 8, 260 6, 380 18 S 540 34, 596 12" />
+          </svg>
+          <div class="contact-rest">
+            <a class="email magnetic" href="mailto:sharathnaik89@gmail.com"><span>sharathnaik89@gmail.com</span></a>
+            <button class="copy" type="button">Copy email</button>
+            <ul class="socials">
+              <li><a class="magnetic" href="mailto:sharathnaik89@gmail.com"><img src="/icons/gmail.webp" alt="" width="28" height="28" />Email</a></li>
+              <li><a class="magnetic" href="https://www.linkedin.com/in/sharath-b-naik/" target="_blank" rel="noopener"><img src="/icons/linkedin.webp" alt="" width="28" height="28" />LinkedIn</a></li>
+              <li><a class="magnetic" href="https://github.com/sharath-b-naik" target="_blank" rel="noopener"><img src="/icons/github.webp" alt="" width="28" height="28" />GitHub</a></li>
+              <li><a class="magnetic" href="https://stackoverflow.com/users/15207145/sharath-b-naik" target="_blank" rel="noopener"><img src="/icons/stackoverflow.webp" alt="" width="28" height="28" />Stack Overflow</a></li>
+            </ul>
+          </div>
+        </div>
+        <footer class="foot">
+          <span>© <span class="year"></span> Sharath B Naik</span>
+          <span>Built with TypeScript · GSAP · Lenis</span>
+        </footer>
+      </section>
+    </main>
+
+    <div class="scroll-space" aria-hidden="true"></div>
+    <div class="toast" role="status"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
